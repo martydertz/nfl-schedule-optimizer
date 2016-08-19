@@ -9,5 +9,7 @@ Creates a proxy-rating for game popularity then maximizes given scheduling const
 ##How It Works
 The optimization problem is broken down into chunks. Each chunk is a file named 'Enhancement' (ie EnhancementOne) with procedures to make the core model then ad each constraint. Constraints go from basic -- beginning with 'each game occurs once in the season' -- to more complex -- a team can't play a Monday night game immediately after a Thursday night game.
 
+The 'nflOptimizer.py' file calls all other modules to create and solve the model.
+
 ##Soft vs Hard Constraints
 Hard constraints, like each team plays once a week, are unbreakable. Soft constraints, like no rematches within 8 weeks, can be broken but when they are deduct a penalty cost from the model score. 'Hard' and 'soft' are used in the contraint procedures to make it clear what each is. 
